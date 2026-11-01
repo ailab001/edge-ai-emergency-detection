@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+*.swp
+*.swo
+.AppleDouble
+.LSOverride
+
+# Data files
+*.json
+edge_ai/datasets/*.json
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Archive
+*.tar.gz
+*.zip

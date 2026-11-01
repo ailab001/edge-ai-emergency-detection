@@ -1,0 +1,20 @@
+services:
+  edge:
+    build:
+      context: .
+      dockerfile: edge_ai/Dockerfile
+    volumes:
+      - ./edge_ai/datasets:/app/edge_ai/datasets
+    tty: true
+    stdin_open: true
+    command: sleep infinity
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+      - NVIDIA_VISIBLE_DEVICES=0
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['0']
+              capabilities: [gpu]
